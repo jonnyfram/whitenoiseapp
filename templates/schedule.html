@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Simple interface to make some music using a raspberry pi">
+    <meta name="author" content="Robert Filter">
+    <link rel="icon" href="">
+    <title>{{ title }}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <!-- app css -->
+    <link rel="stylesheet" href="static/css/main.css">
+  </head>
+
+  <body>
+<div>
+    <a href="/"><button type="button" class="btn btn-info">Back</button>
+</div>
+  <!--toggle buttons -->
+
+</<div>
+  <!-- TODO if check to switch between states 
+  <button type="button" class="btn btn-success">Timer Disabled</button>-->
+  
+<!-- https://www.w3schools.com/howto/howto_css_switch.asp -->
+<style>
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #01DF3A;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+
+<!-- checkboces -->
+<div>
+    Schedule
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+<p>
+    From<br>
+    <select name="fadetime">
+  <option value="volvo">1</option>
+  <option value="saab">5</option>
+  <option value="fiat">15</option>
+  <option value="audi">30</option>
+  <option value="audi">60</option>
+</select>
+
+<br>
+To<br>
+<select name="fadetime">
+  <option value="volvo">1</option>
+  <option value="saab">5</option>
+  <option value="fiat">15</option>
+  <option value="audi">30</option>
+  <option value="audi">60</option>
+</select>
+</p>
+
+</div>
+
+<div>
+    Fade
+    
+    <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label><br>
+
+<select name="fadetime">
+  <option value="volvo">1</option>
+  <option value="saab">5</option>
+  <option value="fiat">15</option>
+  <option value="audi">30</option>
+  <option value="audi">60</option>
+</select>
+
+</div>
+
+<div>
+    Days
+    <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label><br>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-primary">Mon</button>
+  <button type="button" class="btn btn-primary">Tue</button>
+  <button type="button" class="btn btn-primary">Wed</button>
+  <button type="button" class="btn btn-primary">Thu</button>
+  <button type="button" class="btn btn-primary">Fri</button>
+  <button type="button" class="btn btn-primary">Sat</button>
+  <button type="button" class="btn btn-primary">Sun</button>
+</div>
+  </body>
+</html>

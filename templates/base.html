@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask Base Template Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div#main {
+                max-width: 500px;
+                padding: 20px;
+            }
+
+            nav .title {
+                font-weight: bold;
+            }
+
+            a.active {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <h2>Hello world with Jinja and Flask Base Template</h2>
+            <br>
+
+            {% block content %}{% endblock %}
+            <br>
+            <h2>End of Hello world Base Template</h2>
+        </div>
+    </body>
+</html>
