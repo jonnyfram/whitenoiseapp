@@ -14,7 +14,7 @@
 
   <body>
 <div>
-    <a href="/"><button type="button" class="btn btn-info">Back</button>
+    <a href="/"><button type="button" class="btn btn-info">Back</button> </a>
 </div>
   <!--toggle buttons -->
 
@@ -84,53 +84,94 @@ input:checked + .slider:before {
 <!-- checkboces -->
 <div>
     Schedule
+    
+<!--<form role="form" methods='post'>
 <label class="switch">
   <input type="checkbox">
   <span class="slider round"></span>
 </label>
+</form> -->
+
 <p>
+  <form role="form" methods='post'>
     From<br>
-    <select name="fadetime">
-  <option value="volvo">1</option>
-  <option value="saab">5</option>
-  <option value="fiat">15</option>
-  <option value="audi">30</option>
-  <option value="audi">60</option>
+    <select name="play_start">
+  <option value="19">7pm</option>
+  <option value="20">8pm</option>
+  <option value="21">9pm</option>
+  <option value="22">10pm</option>
+  <option value="23">11pm</option>
+  <option value="24">12am</option>
+  <option value="1">1am</option>
+  <option value="2">2am</option>
+  <option value="3">3am</option>
+  <option value="4">4am</option>
+  <option value="5">5am</option>
+  <option value="6">6am</option>
+  <option value="7">7am</option>
+  <option value="8">8am</option>
+  <option value="9">9am</option>
+  <option value="10">10am</option>
+  <option value="11">11am</option>
+  <option value="12">12pm</option>
+  <option value="13">1pm</option>
+  <option value="14">2pm</option>
+  <option value="15">3pm</option>
+  <option value="16">4pm</option>
+  <option value="17">5pm</option>
+  <option value="18">6pm</option>
 </select>
 
 <br>
 To<br>
-<select name="fadetime">
-  <option value="volvo">1</option>
-  <option value="saab">5</option>
-  <option value="fiat">15</option>
-  <option value="audi">30</option>
-  <option value="audi">60</option>
+<select name="play_end">
+  <option value="19">7pm</option>
+  <option value="20">8pm</option>
+  <option value="21">9pm</option>
+  <option value="22">10pm</option>
+  <option value="23">11pm</option>
+  <option value="24">12am</option>
+  <option value="1">1am</option>
+  <option value="2">2am</option>
+  <option value="3">3am</option>
+  <option value="4">4am</option>
+  <option value="5">5am</option>
+  <option value="6">6am</option></option>
+  <option value="7">7am</option>
+  <option value="8">8am</option>
+  <option value="9">9am</option>
+  <option value="10">10am</option>
+  <option value="11">11am</option>
+  <option value="12">12pm</option>
+  <option value="13">1pm</option>
+  <option value="14">2pm</option>
+  <option value="15">3pm</option>
+  <option value="16">4pm</option>
+  <option value="17">5pm</option>
+  <option value="18">6pm</option>
 </select>
 </p>
-
+Fade</p>
+<select name="fade_len">
+  <option value="19">1 minute</option>
+  <option value="20">3 minutes</option>
+  <option value="21">5 minutes</option>
+  <option value="21">10 minutes</option>
+  <option value="21">15 minutes</option>
+  <option value="21">20 minutes</option>
+  <option value="21">30 minutes</option>
+  <option value="21">40 minutes</option>
+  <option value="21">50 minutes</option>
+  <option value="21">60 minutes</option>
+</select><br><br>
+<!-- get the result of these forms to enable/disable schedule -->
+ <button type="submit" name="apply_schedule" value="1" class="btn btn-success">Enable schedule</button> 
+</form>
+<br>
+<form role="form" methods='post'> <button type="submit" name="apply_schedule" value="0" class="btn btn-danger">Disable schedule</button> </form>
 </div>
-
 <div>
-    Fade
-    
-    <label class="switch">
-  <input type="checkbox">
-  <span class="slider round"></span>
-</label><br>
-
-<select name="fadetime">
-  <option value="volvo">1</option>
-  <option value="saab">5</option>
-  <option value="fiat">15</option>
-  <option value="audi">30</option>
-  <option value="audi">60</option>
-</select>
-
-</div>
-
-<div>
-    Days
+   <!-- Days
     <label class="switch">
   <input type="checkbox">
   <span class="slider round"></span>
@@ -145,6 +186,6 @@ To<br>
   <button type="button" class="btn btn-primary">Fri</button>
   <button type="button" class="btn btn-primary">Sat</button>
   <button type="button" class="btn btn-primary">Sun</button>
-</div>
+</div> -->
   </body>
 </html>

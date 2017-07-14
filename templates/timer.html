@@ -13,16 +13,14 @@
   </head>
 
   <body>
-<a href="/"><button type="button" class="btn btn-info">Back</button>
+<a href="/"><button type="button" class="btn btn-info">Back</button></a><br>
 <!-- Group of buttons for other functionality to live at bottom of app -->
 
 
 <!--toggle buttons -->
 
 </<div>
-Timer toggle
-  <!-- TODO if check to switch between states 
-  <button type="button" class="btn btn-success">Timer Disabled</button>-->
+
   
 <!-- https://www.w3schools.com/howto/howto_css_switch.asp -->
 <style>
@@ -82,32 +80,56 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 </style>
-
+<!--
+Timer toggle
+  <!-- TODO if check to switch between states 
 
 <label class="switch">
   <input type="checkbox">
   <span class="slider round"></span>
 </label>
-
+-->
 </div>
 
 <p>
     <br>
-    Quick timer
+    <!--Quick timer-->
 </p>
 
 <div class="btn-group-vertical">
-    <button type="button" class="btn btn-info">20 minutes</button>
-    <button type="button" class="btn btn-info">40 minutes</button>
-    <button type="button" class="btn btn-info">60 minutes</button>
-</div>
+      <form role="form" methods='post'>
+        <label for="title">Quick Timer</label>
+        <select name="timer_len">
+            <option value="20">20</option>
+            <option value="40">40</option>
+            <option value="60">60</option>
+            <option value="90">90</option>        
+        </select>
+        minutes
+        <button type="submit">Set</button>
+        <!--<button type="submit">Submit</button>-->
+    </form>
 
+    <!--<form role="form" action="/timer" method="post" name="test"><button type="submit" class="btn btn-info">20 minutes</button></form>-->
+    <!--<form action="/timer" method="post" name="edit_python20"><input type="hidden" test="20"/><button type="submit" class="btn btn-info">20 minutes</button></form>-->
+    <!--<button type="button" class="btn btn-info">40 minutes</button>
+    <button type="button" class="btn btn-info">60 minutes</button> -->
+
+    <!--<form action="edit_python" method="post" name="edit_python"><input type="hidden" name="ivalue" value=""/><input type="submit" value="Submit" /></form><-->
+    <!--<form action="" method="POST" ><button class="btn btn-danger" type="submit" name="delete" value="delete"><span class="glyphicon glyphicon-trash"></span> Delete</button> </form>-->
+
+</form>
+    
+</div>
+  <!--
 <div class="btn-group-vertical">
+
     <button type="button" class="btn btn-info">90 minutes</button>
     <button type="button" class="btn btn-info">120 minutes</button>
     <button type="button" class="btn btn-info">160 minutes</button>
+   
 </div>
-
+-->
  <!-- in case radio buttons work out better
 <div>
    
@@ -121,7 +143,7 @@ input:checked + .slider:before {
 </p>
 
 <div>
-    Custom Timer
+    <!--Custom Timer
       <!--toggle buttons -->
 
 </<div>
@@ -187,20 +209,20 @@ input:checked + .slider:before {
 }
 </style>
 
-
+<!--
 <label class="switch">
   <input type="checkbox">
   <span class="slider round"></span>
 </label>
-
+-->
 </div>
 </div>
 
-<div>
-    <form ahref="/">
-  Time:
-  <input type="text" name="custom_time" value="0">
-  <!--input type="submit" value="Set"-->
+<div><!--ahref="/timer"-->
+    <form role="form" methods='post'>
+      Custom time:
+  <input type="text" name="timer_len" value="0">
+  <button type="submit" value="Set">Set</button>
 
 </form> 
 <!--p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p-->

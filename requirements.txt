@@ -8,3 +8,4 @@ itsdangerous==0.24
 jsonschema
 nose
 psycopg2
+pydub
