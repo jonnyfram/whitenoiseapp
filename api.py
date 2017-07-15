@@ -1,9 +1,15 @@
 from flask import Flask, render_template, request
 from os import environ
 import functools
-from pydub import AudioSegment
-from pydub.playback import play
+#from pydub import AudioSegment
+#from pydub.playback import play
 import wave
+
+#import pygame
+
+import pyglet
+
+#from playsound import playsound
 
 import time
 import sounds
@@ -13,12 +19,13 @@ app=Flask(__name__)
 @app.route("/")
 def main_page():
     print("GONNA TRY AND PLAY THE SOUND")
-    #song = AudioSegment.from_wav("home/ubuntu/workspace/audio/test.wav")
-    #play(song)
-    
-    wave.open('home/ubuntu/workspace/audio/test.wav', mode='r')
-
-    return render_template('sounds.html', sound_name="sound_")
+    song  = pyglet.media.load('audio/Lava-sound.mp3')
+    song.play()
+    pyglet.app.run()
+    """pygame.mixer.pre_init()
+    pygame.mixer.init()
+    pygame.mixer.music.load("audio/Lava-sound.mp3")
+    pygame.mixer.music.play()"""
     
 @app.route("/timer", methods=["GET", "POST"])
 def timer():
@@ -56,7 +63,7 @@ def test():
     return render_template('test.html', sound_name="sound_name")
     
 if __name__ == "__main__":
-    app.run(host=environ['IP'], port=int(environ['PORT']))
+    app.run(host='0.0.0.0')
     
 
 

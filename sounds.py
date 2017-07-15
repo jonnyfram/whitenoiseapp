@@ -1,14 +1,14 @@
 from flask import Flask, render_template, request
 from os import environ
 import functools
-from pydub import AudioSegment
-from pydub.playback import play
+#from pydub import AudioSegment
+#from pydub.playback import play
 from datetime import datetime
 
 import time
 from threading import Timer
 
-def playsound():
+def play_sound():
     """Play sounds passed from user interface"""
     pass
 
